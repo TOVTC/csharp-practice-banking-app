@@ -21,13 +21,16 @@ public class BankAccount
         }
     }
 
+    // The compiler doesn't generate a default constructor when you define a constructor yourself.
+    //That means each derived class must explicitly call this constructor. 
+
     public BankAccount(string name, decimal initialBalance)
     {
         Number = _accountNumberSeed.ToString();
         _accountNumberSeed++;
 
         Owner = name;
-        MakeDeposit(initialBalance, DateTime.Now, "Initial balance");
+        MakeDeposit(initialBalance, DateTime.Now, "initial balance");
     }
 
     private List<Transaction> _allTransactions = new List<Transaction>();
@@ -72,5 +75,15 @@ public class BankAccount
             report.AppendLine($"{item.Date.ToShortDateString()}\t{item.Amount}\t{balance}\t{item.Notes}");
         }
         return report.ToString();
+    }
+
+    // A virtual method is a method where any derived class may choose to reimplement.
+    // The derived classes use the override keyword to define the new implementation.
+    // "overriding the base class implementation"
+    // You can also declare abstract methods where derived classes must override the behavior.
+    // The base class does not provide an implementation for an abstract method.
+    public virtual void PerformMonthEndTransactions()
+    {
+
     }
 }

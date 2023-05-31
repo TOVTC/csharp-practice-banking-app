@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "51lyi1hff5AgwjOZJwkf5DO1CijtL2+Zjnr9RCoSuhq/ypeg8WLrgnrG/eJxJnhVTgYX2MK9Yr04XVY7XbgRkQ==",
+  "dgSpecHash": "Je5uEcwDwSfUVQ3W0l2u6nAlDiAz4rlCE+HXxnTJjhFIi+KBBTwTBij3kzdfZuuF7uOSIgG3Lv8kklvBO3z4cA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\To_V1\\projects\\practice-apps\\csharp-practice-starters\\classes\\Classes.csproj",
+  "projectFilePath": "C:\\Users\\To_V1\\projects\\practice-apps\\csharp-practice-banking-app\\Classes.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

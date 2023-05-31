@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\To_V1\\projects\\practice-apps\\csharp-practice-starters\\Classes\\Classes.csproj",
+      "projectUniqueName": "C:\\Users\\To_V1\\projects\\practice-apps\\csharp-practice-banking-app\\Classes.csproj",
       "projectName": "Classes",
-      "projectPath": "C:\\Users\\To_V1\\projects\\practice-apps\\csharp-practice-starters\\Classes\\Classes.csproj",
+      "projectPath": "C:\\Users\\To_V1\\projects\\practice-apps\\csharp-practice-banking-app\\Classes.csproj",
       "packagesPath": "C:\\Users\\To_V1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\To_V1\\projects\\practice-apps\\csharp-practice-starters\\Classes\\obj\\",
+      "outputPath": "C:\\Users\\To_V1\\projects\\practice-apps\\csharp-practice-banking-app\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\To_V1\\AppData\\Roaming\\NuGet\\NuGet.Config",
