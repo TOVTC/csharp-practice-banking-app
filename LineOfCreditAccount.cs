@@ -2,7 +2,8 @@ namespace Classes;
 
 public class LineOfCreditAccount : BankAccount
 {
-    public LineOfCreditAccount(string name, decimal initialBalance) : base(name, initialBalance)
+    // this constructor calls a different base class constructor than the other account types
+    public LineOfCreditAccount(string name, decimal initialBalance, decimal creditLimit) : base(name, initialBalance, -creditLimit)
     {
 
     }

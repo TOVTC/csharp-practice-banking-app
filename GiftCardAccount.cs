@@ -8,4 +8,12 @@ public class GiftCardAccount : BankAccount
     {
         _monthlyDeposit = monthlyDeposit;
     }
+
+    public override void PerformMonthEndTransactions()
+    {
+        if (_monthlyDeposit != 0)
+        {
+            MakeDeposit(_monthlyDeposit, DateTime.Now, "add monthly deposit");
+        }
+    }
 }

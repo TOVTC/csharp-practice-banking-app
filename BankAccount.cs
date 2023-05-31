@@ -6,6 +6,10 @@ public class BankAccount
     // The value of a non-static variable is unique to each instance of the BankAccount object.
     private static int _accountNumberSeed = 1234567890;
 
+    // readonly indicates that the value cannot be chagned after the object is constructed
+    // Once a BankAccount is created, the minimumBalance can't change. 
+    private readonly decimal _minimumBalance;
+
     public string Number { get; }
     public string Owner { get; set; }
     public decimal Balance
@@ -20,20 +24,30 @@ public class BankAccount
             return balance;
         }
     }
+    private List<Transaction> _allTransactions = new List<Transaction>();
+
+    // the : this() expression calls the other constrctor that takes three parameters
+    // used to initialize accounts that are not of the line of credit type
+    public BankAccount(string name, decimal intialBalance) : this(name, intialBalance, 0)
+    {
+
+    }
 
     // The compiler doesn't generate a default constructor when you define a constructor yourself.
-    //That means each derived class must explicitly call this constructor. 
-
-    public BankAccount(string name, decimal initialBalance)
+    // That means each derived class must explicitly call this constructor. 
+    public BankAccount(string name, decimal initialBalance, decimal minimumBalance)
     {
         Number = _accountNumberSeed.ToString();
         _accountNumberSeed++;
 
         Owner = name;
-        MakeDeposit(initialBalance, DateTime.Now, "initial balance");
+        _minimumBalance = minimumBalance;
+        // deposits have to be greater than 0, but credit accounts can open with a balance of 0 since you are borrowing money
+        if (initialBalance > 0)
+        {
+            MakeDeposit(initialBalance, DateTime.Now, "initial balance");
+        }
     }
-
-    private List<Transaction> _allTransactions = new List<Transaction>();
 
     // The throw statement throws an exception.
     // Execution of the current block ends, and control transfers to the first matching catch block found in the call stack. 
@@ -50,11 +64,11 @@ public class BankAccount
 
     public void MakeWithdrawal(decimal amount, DateTime date, string note)
     {
-        if (amount <=0)
+        if (amount <= 0)
         {
             throw new ArgumentOutOfRangeException(nameof(amount), "Amount of withdrawal must be greater than 0");
         }
-        if (Balance - amount < 0)
+        if (Balance - amount < _minimumBalance)
         {
             throw new InvalidOperationException("Insufficient funds for this withdrwawal");
         }
