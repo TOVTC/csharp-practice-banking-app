@@ -1,0 +1,15 @@
+C:\Users\To_V1\projects\practice-apps\csharp-practice-starters\Classes\obj\Debug\net7.0\Classes.csproj.AssemblyReference.cache
+C:\Users\To_V1\projects\practice-apps\csharp-practice-starters\Classes\obj\Debug\net7.0\Classes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\To_V1\projects\practice-apps\csharp-practice-starters\Classes\obj\Debug\net7.0\Classes.AssemblyInfoInputs.cache
+C:\Users\To_V1\projects\practice-apps\csharp-practice-starters\Classes\obj\Debug\net7.0\Classes.AssemblyInfo.cs
+C:\Users\To_V1\projects\practice-apps\csharp-practice-starters\Classes\obj\Debug\net7.0\Classes.csproj.CoreCompileInputs.cache
+C:\Users\To_V1\projects\practice-apps\csharp-practice-starters\Classes\bin\Debug\net7.0\Classes.exe
+C:\Users\To_V1\projects\practice-apps\csharp-practice-starters\Classes\bin\Debug\net7.0\Classes.deps.json
+C:\Users\To_V1\projects\practice-apps\csharp-practice-starters\Classes\bin\Debug\net7.0\Classes.runtimeconfig.json
+C:\Users\To_V1\projects\practice-apps\csharp-practice-starters\Classes\bin\Debug\net7.0\Classes.dll
+C:\Users\To_V1\projects\practice-apps\csharp-practice-starters\Classes\bin\Debug\net7.0\Classes.pdb
+C:\Users\To_V1\projects\practice-apps\csharp-practice-starters\Classes\obj\Debug\net7.0\Classes.dll
+C:\Users\To_V1\projects\practice-apps\csharp-practice-starters\Classes\obj\Debug\net7.0\refint\Classes.dll
+C:\Users\To_V1\projects\practice-apps\csharp-practice-starters\Classes\obj\Debug\net7.0\Classes.pdb
+C:\Users\To_V1\projects\practice-apps\csharp-practice-starters\Classes\obj\Debug\net7.0\Classes.genruntimeconfig.cache
+C:\Users\To_V1\projects\practice-apps\csharp-practice-starters\Classes\obj\Debug\net7.0\ref\Classes.dll
