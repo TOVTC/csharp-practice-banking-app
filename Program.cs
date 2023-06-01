@@ -35,6 +35,15 @@ lineOfCredit.MakeDeposit(150m, DateTime.Now, "Partial restoration on repairs");
 lineOfCredit.PerformMonthEndTransactions();
 Console.WriteLine(lineOfCredit.GetAccountHistory());
 
+var lineOfCredit2 = new LineOfCreditAccount("line of credit", 0, 2000);
+// How much is too much to borrow?
+lineOfCredit2.MakeWithdrawal(1000m, DateTime.Now, "Take out monthly advance");
+lineOfCredit2.MakeDeposit(50m, DateTime.Now, "Pay back small amount");
+lineOfCredit2.MakeWithdrawal(5000m, DateTime.Now, "Emergency funds for repairs");
+lineOfCredit2.MakeDeposit(150m, DateTime.Now, "Partial restoration on repairs");
+lineOfCredit2.PerformMonthEndTransactions();
+Console.WriteLine(lineOfCredit2.GetAccountHistory());
+
 // this section is going to generate errors from a previous example
 try
 {

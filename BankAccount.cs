@@ -68,12 +68,27 @@ public class BankAccount
         {
             throw new ArgumentOutOfRangeException(nameof(amount), "Amount of withdrawal must be greater than 0");
         }
-        if (Balance - amount < _minimumBalance)
-        {
-            throw new InvalidOperationException("Insufficient funds for this withdrwawal");
-        }
-        var withdrawal = new Transaction(-amount, date, note);
+        Transaction? overdraftTransaction = CheckWithdrawalLimit(Balance - amount < _minimumBalance);
+        Transaction? withdrawal = new(-amount, date, note);
         _allTransactions.Add(withdrawal);
+        if (overdraftTransaction != null)
+        {
+            _allTransactions.Add(overdraftTransaction);
+        }
+    }
+
+    // The added method is protected, which means that it can be called only from derived classes.
+    // That declaration prevents other clients from calling the method. It's also virtual so that derived classes can change the behavior.
+    protected virtual Transaction? CheckWithdrawalLimit(bool isOverdrawn)
+    {
+        if (isOverdrawn)
+        {
+            throw new InvalidOperationException("Not sufficient funds for this withdrawal");
+        }
+        else
+        {
+            return default;
+        }
     }
 
     // The history uses the StringBuilder class to format a string that contains one line for each transaction. 
